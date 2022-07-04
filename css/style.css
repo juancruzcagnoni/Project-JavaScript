@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+}
+
+.navbar {
+  background-color: #171717;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+  padding-top: 0.8rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFFF;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #FFFF;
+}
+
+.navbar-toggler {
+  border: transparent;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+main h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 7rem;
+  color: #FFFF;
+  margin: 0;
+  margin-top: 5rem;
+  line-height: 7.5rem;
+}
+
+main p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: #FFFF;
+  margin-bottom: 4rem;
+}
+
+main a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FFFF;
+  padding: 0.8rem 1.5rem;
+  background-color: #009368;
+  border-radius: 0.3rem;
+}
+
+main a:hover {
+  color: #FFFF;
+}
+
+.about {
+  margin-top: 5rem;
+}
+
+.about h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #FFFF;
+}
+
+.about p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFF;
+}
+
+.shop {
+  margin-top: 5rem;
+}
+
+.shop h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #FFFF;
+  margin-bottom: 5rem;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.card img {
+  border-radius: 0.3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFF;
+}
+
+.card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #B8B8B8;
+}
+
+.articulo {
+  position: relative;
+  height: 350px;
+}
+
+.button-p {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.3rem;
+}
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FFFF;
+  padding: 0.5rem 1rem;
+  background-color: #009368;
+  border-radius: 0.3rem;
+}
+
+.button:hover {
+  color: #FFFF;
+}
+
+.precio {
+  color: #009368;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact {
+  margin-top: 5rem;
+}
+
+.contact h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #FFFF;
+  margin-bottom: 5rem;
+}
+
+.form {
+  background-color: #FFFF;
+  border-radius: 0.3rem;
+  position: relative;
+  padding: 3rem;
+}
+
+.form label {
+  color: #009368;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form input, .form textarea {
+  border: none;
+  background-color: #D9D9D9;
+}
+
+.form .enviar {
+  border-radius: 0.3rem;
+  background-color: #009368;
+}
+
+.footer p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #B8B8B8;
+}
+/*# sourceMappingURL=style.css.map */
