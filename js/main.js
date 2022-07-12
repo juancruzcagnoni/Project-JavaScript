@@ -1,3 +1,4 @@
+// Constructor de objectos
 class Cuadros {
     constructor (item, nombre, precio) {
         this.item = item;
@@ -6,6 +7,7 @@ class Cuadros {
     }
 }
 
+// Arrays
 let cuadros = [
 cuadroAbstract = new Cuadros(1, 'Abstract', 99),
 cuadroRealistic = new Cuadros(2, 'Realistic', 199),
@@ -14,6 +16,7 @@ cuadroPortrait = new Cuadros(3, 'Portrait', 149),
 
 let tiposDeCuadros = ['Abstract', 'Realistic', 'Portrait']
 
+// Menu 
 let entrada = '';
 
 while (entrada != 'ESC' && entrada != null) {
@@ -30,7 +33,5 @@ while (entrada != 'ESC' && entrada != null) {
         let precio = cuadroPortrait.precio;
         alert (`Obtuvo su cuadro "Portrait" que vale ${precio}`)
     }
-
-
 }
 
