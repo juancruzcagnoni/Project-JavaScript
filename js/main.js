@@ -1,33 +1,36 @@
-// Variables
-let stock = 8;
-let opcion;
-
-// Funciones 
-const venta = (cant) => {
-    if (stock >= cant) {
-        stock = stock - cant;
-        alert (`Compra realizada con exito!`);
-        alert (`Aprovecha! nos quedan solo ${stock} unidades.`);
-    } else{
-        alert (`No hay stock suficiente, quedan ${stock} unidades.`);
+class Cuadros {
+    constructor (item, nombre, precio) {
+        this.item = item;
+        this.nombre = nombre;
+        this.precio = precio;
     }
 }
 
-// Menu 
-do {
-    opcion = Number (prompt('Ingrese una opcion: \n\n 1. Realizar compra.\n 2. Salir.'));
-    let cant;
+let cuadros = [
+cuadroAbstract = new Cuadros(1, 'Abstract', 99),
+cuadroRealistic = new Cuadros(2, 'Realistic', 199),
+cuadroPortrait = new Cuadros(3, 'Portrait', 149),
+];
 
-    switch (opcion) {
-        case 1:    
-            cant = Number(prompt('Ingrese la cantidad de cuadros que quiere.'));
-            venta(cant);
-            break;
+let tiposDeCuadros = ['Abstract', 'Realistic', 'Portrait']
 
-        case 2:    
-            alert('Que pena, esperamos que vuelvas.');
-            break;
+let entrada = '';
+
+while (entrada != 'ESC' && entrada != null) {
+    let join = tiposDeCuadros.join('\n');
+    entrada = prompt(`Ingrese el cuadro que quiere comprar o ESC para finalizar la compra: ${join}`);
+
+    if (entrada == 'Abstract') {
+        let precio = cuadroAbstract.precio;
+        alert (`Obtuvo su cuadro "Abstract" que vale ${precio}`)
+    } else if (entrada == 'Realistic') {
+        let precio = cuadroRealistic.precio;
+        alert (`Obtuvo su cuadro "Realistic" que vale ${precio}`)
+    } else if (entrada == 'Portrait') {
+        let precio = cuadroPortrait.precio;
+        alert (`Obtuvo su cuadro "Portrait" que vale ${precio}`)
     }
-} while (opcion != 2);
 
+
+}
 
