@@ -1,3 +1,7 @@
+// Variables
+let nombre = prompt('Ingrese su nombre para continuar'); 
+let entrada = '';
+
 // Constructor de objectos
 class Cuadros {
     constructor (item, nombre, precio) {
@@ -17,21 +21,21 @@ cuadroPortrait = new Cuadros(3, 'Portrait', 149),
 let tiposDeCuadros = ['Abstract', 'Realistic', 'Portrait']
 
 // Menu 
-let entrada = '';
+alert (`Buen dia ${nombre}, vamos a realizar su compra!`)
 
 while (entrada != 'ESC' && entrada != null) {
-    let join = tiposDeCuadros.join('\n');
-    entrada = prompt(`Ingrese el cuadro que quiere comprar o ESC para finalizar la compra: ${join}`);
+    let saltoDeLinea = tiposDeCuadros.join('\n');
+    entrada = prompt(`Ingrese al carrito el cuadro que quiere comprar o ESC para salir\n\n${saltoDeLinea}`);
 
     if (entrada == 'Abstract') {
         let precio = cuadroAbstract.precio;
-        alert (`Obtuvo su cuadro "Abstract" que vale ${precio}`)
+        alert (`Agrego a su carrito el cuadro "Abstract" que vale ${precio}`)
     } else if (entrada == 'Realistic') {
         let precio = cuadroRealistic.precio;
-        alert (`Obtuvo su cuadro "Realistic" que vale ${precio}`)
+        alert (`Agrego a su carrito el cuadro "Realistic" que vale ${precio}`)
     } else if (entrada == 'Portrait') {
         let precio = cuadroPortrait.precio;
-        alert (`Obtuvo su cuadro "Portrait" que vale ${precio}`)
+        alert (`Agrego a su carrito el cuadro "Portrait" que vale ${precio}`)
     }
 }
 
