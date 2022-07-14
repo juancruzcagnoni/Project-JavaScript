@@ -1,41 +1,73 @@
-// Variables
-let nombre = prompt('Ingrese su nombre para continuar'); 
-let entrada = '';
-
-// Constructor de objectos
-class Cuadros {
-    constructor (item, nombre, precio) {
-        this.item = item;
-        this.nombre = nombre;
+// Constructor
+class Producto {
+    constructor(cuadro, autor, precio, categoria) {
+        this.cuadro = cuadro;
+        this.autor = autor;
         this.precio = precio;
+        this.categoria = categoria;  
+    }
+    mostrarProducto() {
+        return ("Cuadro N°: " + this.cuadro + ',' + " Precio: " + this.precio + ',' + " Autor: " + this.autor + "\n");
     }
 }
 
-// Arrays
-let cuadros = [
-cuadroAbstract = new Cuadros(1, 'Abstract', 99),
-cuadroRealistic = new Cuadros(2, 'Realistic', 199),
-cuadroPortrait = new Cuadros(3, 'Portrait', 149),
+// Array de productos 
+let productos = [
+    new Producto(1, 'Charlie Lewis', 149, 'Abstract'),
+    new Producto(2, 'Dorothy Moore', 99, 'Abstract'),
+    new Producto(3, 'Kimberly Young', 139, 'Abstract'),
+    new Producto(4, 'Henry Cook', 199,'Abstract'),
+
+    new Producto(5, 'Peter Walker', 129, 'Realistic'),
+    new Producto(6, 'Kathleen Clark', 49, 'Realistic'),
+    new Producto(7, 'Larry Davies', 299, 'Realistic'),
+    new Producto(8, 'Jeffrey Morris', 89, 'Realistic'),
+
+    new Producto(9, 'Brandon Allen', 199, 'Portrait'),
+    new Producto(10, 'Sophia Phillips', 99, 'Portrait'),
+    new Producto(11, 'Debra Jones', 89, 'Portrait'),
+    new Producto(12, 'Emily Clark', 299, 'Portrait'),
 ];
 
-let tiposDeCuadros = ['Abstract', 'Realistic', 'Portrait']
+// Array de categorias 
+let categorias = ["Abstract", "Realistic", "Portrait"];
+
+// Array de productos en el carro 
+let productosEnCarro = [];
 
 // Menu 
-alert (`Buen dia ${nombre}, vamos a realizar su compra!`)
+let categoria = "";
 
-while (entrada != 'ESC' && entrada != null) {
-    let saltoDeLinea = tiposDeCuadros.join('\n');
-    entrada = prompt(`Ingrese al carrito el cuadro que quiere comprar o ESC para salir\n\n${saltoDeLinea}`);
-
-    if (entrada == 'Abstract') {
-        let precio = cuadroAbstract.precio;
-        alert (`Agrego a su carrito el cuadro "Abstract" que vale ${precio}`)
-    } else if (entrada == 'Realistic') {
-        let precio = cuadroRealistic.precio;
-        alert (`Agrego a su carrito el cuadro "Realistic" que vale ${precio}`)
-    } else if (entrada == 'Portrait') {
-        let precio = cuadroPortrait.precio;
-        alert (`Agrego a su carrito el cuadro "Portrait" que vale ${precio}`)
-    }
+while (categoria != "ESC" && categoria != null) {
+    let aux = categorias.join ("\n");
+    categoria = prompt(`Ingrese la categoria del cuadro que quiere comprar o "ESC" para abandonar la compra. \n\n${aux}`);
+    
+    if (categoria != "ESC" && categoria != null) {
+        let productosFiltradoPorCategoria = productos.filter((item) => item.categoria == categoria);
+        
+        let cartel = "";
+        for (let i = 0; i < productosFiltradoPorCategoria.length; i++) {
+            cartel += productosFiltradoPorCategoria[i].mostrarProducto();
+        }
+        
+        let idSeleccionado = parseInt(prompt("Seleccione el N° del cuadro que quiere comprar: \n\n" + cartel));
+        
+        let productoParaCarro = productosFiltradoPorCategoria.find((item) => item.cuadro == idSeleccionado);
+        
+        if (productoParaCarro) {
+            productosEnCarro.push(productoParaCarro);                
+        }            
+    }    
 }
 
+function comprar(nombre, productosEnCarro) {
+    let cant = productosEnCarro.reduce((acc, item) => item.precio + acc, 0);  
+    alert("Gracias " + nombre + " por tu compra, esperamos que vuelvas! \nTotal: $" + cant);   
+}
+
+if (productosEnCarro.length > 0) {
+    alert('Ingresa tus datos para seguir con la compra!');
+    let nombre = prompt('Nombre:');
+    let email = prompt('Email:');
+    comprar(nombre, productosEnCarro);
+}
