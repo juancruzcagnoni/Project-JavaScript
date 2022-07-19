@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ArtGallery</title>
+    <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg p-2 d-">
+        <nav class="navbar navbar-expand-lg p-2">
             <div class="container d-flex">
                 <a class="navbar-brand mx-0" href="#"><img class="escudo" src="img/Logo.svg" height="35" width="auto"
                         alt="Logo">
@@ -36,10 +37,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item ms-4"><a class="nav-link" href="#About">About</a></li>
-                        <li class="nav-item ms-4"><a class="nav-link" href="#Shop">Shop</a></li>
-                        <li class="nav-item ms-4"><a class="nav-link" href="#Contact">Contact</a></li>
-                        <li class="nav-item ms-4"><a class="nav-link" href="#"><img src="img/Cart.svg" alt="Cart"></a>
+                        <li class="nav-item ms-4"><a class="nav-link" href="#About-Link">About</a></li>
+                        <li class="nav-item ms-4"><a class="nav-link" href="#Shop-Link">Shop</a></li>
+                        <li class="nav-item ms-4"><a class="nav-link" href="#Contact-Link">Contact</a></li>
+                        <li class="nav-item ms-4"><a class="nav-link" href="#Cart-Link"><img src="img/Cart.svg" alt="Cart"></a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +70,7 @@
 
     <!-- About  -->
     <section class="about container">
-        <div id="About"></div>
+        <div id="About-Link"></div>
         <div class="row">
             <div class="col-12 col-md-1">
                 <h2>ABOUT</h2>
@@ -99,103 +100,155 @@
 
     <!-- Shop  -->
     <section class="shop container">
-        <div id="Shop"></div>
+        <div id="Shop-Link"></div>
         <h2>SHOP</h2>
-        <div class="row">
+        <div class="row" id="shop">
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra1.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra1.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra2.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra2.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra3.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra3.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra4.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra4.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra5.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra5.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra6.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra6.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra7.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra7.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
             <div class="card col-12 col-md-3 mb-5 px-2">
                 <div class="articulo">
-                    <a href=""><img src="img/Obra8.jpg" class="img-fluid" alt="Obra1"></a>
-                    <div class="button-p"><a class="button" href="">ADD +</a></div>
+                    <a href=""><img src="img/Obra8.jpg" class="image img-fluid" alt="Obra1"></a>
+                    <div class="button-p"><a class="button">ADD +</a></div>
                 </div>
-                <h3 class="mt-2 mb-5">Lorem ipsum dolor sit amet.</h3>
+                <h3 class="mt-2 mb-5 name">Lorem ipsum dolor sit amet.</h3>
                 <div class="d-flex justify-content-between">
                     <h4 class="p-0 m-0">Lorem, ipsum.</h4>
-                    <p class="precio m-0">$99,87</p>
+                    <p class="price m-0">$99,87</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Carrito -->
+    <section class="shopping-cart">
+        <div class="container">
+            <h2>CART</h2>
+            <div class="shoppingCartItemsContainer">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="shopping-cart-header">
+                            <p>Producto</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="shopping-cart-header">
+                            <p class="text-truncate">Precio</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="shopping-cart-header">
+                            <p>Cantidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center justify-content-between">
+                        <div class="d-flex">
+                            <h6 class="mb-0">Total </h6>
+                            <h6 class="ml-4 mb-0 shoppingCartTotal">0€</h6>
+                        </div>
+                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-header">
+                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body text-white">
+                                Se aumentó correctamente la cantidad
+                            </div>
+                        </div>
+                        <button class="ml-auto comprarButton button" type="button" data-toggle="modal"
+                        data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Contact -->
     <section class="contact container">
-        <div id="Contact"></div>
+        <div id="Contact-Link"></div>
         <h2>CONTACT</h2>
         <div class="form col-12 col-md-8 mx-auto">
             <div class="col-12 col-md-6 mb-3">

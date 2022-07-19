@@ -153,11 +153,48 @@ main a:hover {
   color: #FFFF;
 }
 
-.precio {
+.price {
   color: #009368;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.shopping-cart h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #FFFF;
+  margin-bottom: 5rem;
+}
+
+.shopping-cart p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #009368;
+}
+
+.shopping-cart h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFF;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 5px;
+  margin-right: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
 }
 
 .contact {
