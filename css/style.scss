@@ -202,8 +202,32 @@ main{
 
 .shopping-cart-total {
     min-height: 96px;
-  }
-  
+}
+
+.shopping-cart-quantity-input{
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    color: #009368;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.button-x{
+    background-color: red;
+    color: #FFFF;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.comprarButton{
+    border: none;
+}
+
+.shoppingCartTotal{
+    margin-left: 1rem;
+}
 
 // Contact
 .contact{

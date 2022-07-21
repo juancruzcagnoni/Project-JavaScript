@@ -36,11 +36,37 @@ function addItemToShoppingCart(itemName, itemPrice, itemImage) {
             <div
                 class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
                 <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number" value="1">
-                <button class="btn btn-danger buttonDelete" type="button">X</button>
+                <button class="button-x buttonDelete" type="button">X</button>
             </div>
         </div>
     </div>`
 
     shoppingCartRow.innerHTML = shoppingCartContent;
     shoppingCartItemsContainer.append(shoppingCartRow);
+
+    shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', removeShoppingCartItem);
+
+    updateShoppingCartTotal();
 };
+
+function updateShoppingCartTotal() {
+    let total = 0;
+    const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+  
+    const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+  
+    shoppingCartItems.forEach((shoppingCartItem) => {
+      const shoppingCartItemPriceElement = shoppingCartItem.querySelector('.shoppingCartItemPrice');
+      const shoppingCartItemPrice = parseFloat(shoppingCartItemPriceElement.textContent.replace('$', ''));
+      const shoppingCartItemQuantityElement = shoppingCartItem.querySelector('.shoppingCartItemQuantity');
+      const shoppingCartItemQuantity = parseFloat(shoppingCartItemQuantityElement.value);
+      total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+    });
+    shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+}
+
+function removeShoppingCartItem (event) {
+    const buttonClicked = event.target;
+    buttonClicked.closest('.shoppingCartItem').remove();
+    updateShoppingCartTotal();
+}
