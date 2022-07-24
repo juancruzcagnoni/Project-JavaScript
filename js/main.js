@@ -21,22 +21,22 @@ function addItemToShoppingCart(itemName, itemPrice, itemImage) {
     const shoppingCartRow = document.createElement('div');
     const shoppingCartContent = `
     <div class="row shoppingCartItem">
-        <div class="col-6">
+        <div class="col-5">
             <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                <img src=${itemImage} class="shopping-cart-image">
+                <img src=${itemImage} class="shoppingCartImage">
                 <p class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemName}</p>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-4">
             <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                 <p class="item-price mb-0 shoppingCartItemPrice"> ${itemPrice} </p>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-3">
             <div
                 class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number" value="1">
-                <button class="button-x buttonDelete" type="button">X</button>
+                <input class="shoppingCartQuantityInput shoppingCartItemQuantity" type="number" value="1">
+                <button class="buttonX buttonDelete" type="button">X</button>
             </div>
         </div>
     </div>`
@@ -62,7 +62,7 @@ function updateShoppingCartTotal() {
       const shoppingCartItemQuantity = parseFloat(shoppingCartItemQuantityElement.value);
       total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
     });
-    shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+    shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`;
 }
 
 function removeShoppingCartItem (event) {
@@ -70,3 +70,17 @@ function removeShoppingCartItem (event) {
     buttonClicked.closest('.shoppingCartItem').remove();
     updateShoppingCartTotal();
 }
+
+const openModal = document.querySelector('.openModal');
+const modal = document.querySelector('.shoppingCart');
+const closeModal = document.querySelector('.modalClose')
+
+openModal.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    modal.classList.add('modalShow');
+})
+
+closeModal.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    modal.classList.remove('modalShow');
+})

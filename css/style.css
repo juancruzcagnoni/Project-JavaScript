@@ -12,6 +12,10 @@ body {
 .navbar {
   background-color: #171717;
   font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar-brand {
@@ -33,7 +37,7 @@ body {
 }
 
 main {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 main h1 {
@@ -127,15 +131,16 @@ main a:hover {
   color: #B8B8B8;
 }
 
-.articulo {
+.article {
   position: relative;
   height: 350px;
 }
 
-.button-p {
+.buttonP {
   position: absolute;
   right: 1rem;
   bottom: 1.3rem;
+  cursor: pointer;
 }
 
 .button {
@@ -160,44 +165,101 @@ main a:hover {
   font-weight: 600;
 }
 
-.shopping-cart h2 {
+.shoppingCart {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(37, 37, 37, 0.567);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.shoppingCart h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   font-size: 3rem;
-  color: #FFFF;
-  margin-bottom: 5rem;
+  color: #171717;
+  margin-bottom: 2rem;
 }
 
-.shopping-cart p {
+.shoppingCart p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   color: #009368;
 }
 
-.shopping-cart h6 {
+.shoppingCart h6 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #FFFF;
+  color: #171717;
 }
 
-.shopping-cart-header {
+.shoppingCartContainer {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  height: 75%;
+  background-color: #FFFF;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modalClose {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-decoration: none;
+  color: #171717;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modalClose:hover {
+  color: #171717;
+}
+
+.total {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.modalShow {
+  opacity: 1;
+  pointer-events: unset;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.shoppingCartHeader {
   border-bottom: 1px solid #ccc;
 }
 
-.shopping-cart-image {
+.shoppingCartImage {
   max-width: 80px;
+  max-height: 80px;
   border-radius: 5px;
   margin-right: 0.8rem;
   margin-bottom: 0.6rem;
 }
 
-.shopping-cart-total {
+.shoppingTotal {
   min-height: 96px;
 }
 
-.shopping-cart-quantity-input {
+.shoppingCartQuantityInput {
   width: 50px;
   border-radius: 5px;
   border: none;
@@ -206,16 +268,19 @@ main a:hover {
   background-color: transparent;
 }
 
-.button-x {
-  background-color: red;
+.buttonX {
+  background-color: #cb3234;
   color: #FFFF;
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: 5px;
   border: none;
 }
 
 .comprarButton {
   border: none;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 
 .shoppingCartTotal {
@@ -262,5 +327,20 @@ main a:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
   color: #B8B8B8;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    height: 100vh;
+    text-align: center;
+    margin-top: 8rem;
+  }
+  .cartIcon {
+    width: 25px;
+    height: auto;
+  }
+  .nav-item {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
