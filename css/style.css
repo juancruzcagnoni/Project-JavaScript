@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #171717;
 }
@@ -65,13 +69,17 @@ main a {
   font-size: 1rem;
   text-decoration: none;
   color: #FFFF;
-  padding: 0.8rem 1.5rem;
-  background-color: #009368;
+  padding: 0.8rem 3.5rem;
+  background-color: #f6ae2d;
   border-radius: 0.3rem;
 }
 
 main a:hover {
   color: #FFFF;
+}
+
+main img {
+  border-radius: 5px;
 }
 
 .about {
@@ -150,7 +158,7 @@ main a:hover {
   text-decoration: none;
   color: #FFFF;
   padding: 0.5rem 1rem;
-  background-color: #009368;
+  background-color: #f6ae2d;
   border-radius: 0.3rem;
 }
 
@@ -159,7 +167,7 @@ main a:hover {
 }
 
 .price {
-  color: #009368;
+  color: #f6ae2d;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
@@ -186,7 +194,7 @@ main a:hover {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   font-size: 3rem;
-  color: #171717;
+  color: #FFFF;
   margin-bottom: 2rem;
 }
 
@@ -194,14 +202,14 @@ main a:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #009368;
+  color: #f6ae2d;
 }
 
 .shoppingCart h6 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #171717;
+  color: #FFFF;
 }
 
 .shoppingCartContainer {
@@ -210,30 +218,25 @@ main a:hover {
   width: 80%;
   max-width: 800px;
   height: 75%;
-  background-color: #FFFF;
+  background-color: #171717;
   border-radius: 10px;
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.shoppingCartContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .modalClose {
   position: absolute;
   top: 30px;
   right: 30px;
-  text-decoration: none;
-  color: #171717;
-  font-weight: 600;
-  font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  color: #FFFF;
+  cursor: pointer;
 }
 
 .modalClose:hover {
-  color: #171717;
-}
-
-.total {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
+  color: #FFFF;
 }
 
 .modalShow {
@@ -259,11 +262,15 @@ main a:hover {
   min-height: 96px;
 }
 
+.comprarButton {
+  border: none;
+}
+
 .shoppingCartQuantityInput {
   width: 50px;
   border-radius: 5px;
   border: none;
-  color: #009368;
+  color: #f6ae2d;
   font-weight: bold;
   background-color: transparent;
 }
@@ -274,13 +281,7 @@ main a:hover {
   padding: 4px 12px;
   border-radius: 5px;
   border: none;
-}
-
-.comprarButton {
-  border: none;
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  font-weight: 600;
 }
 
 .shoppingCartTotal {
@@ -307,7 +308,7 @@ main a:hover {
 }
 
 .form label {
-  color: #009368;
+  color: #f6ae2d;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -320,12 +321,12 @@ main a:hover {
 
 .form .enviar {
   border-radius: 0.3rem;
-  background-color: #009368;
+  background-color: #f6ae2d;
 }
 
 .footer p {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #B8B8B8;
 }
 
@@ -341,6 +342,8 @@ main a:hover {
   }
   .nav-item {
     font-size: 1.5rem;
+    border-bottom: #4a4a4a solid 1px;
+    padding: 0.8rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
