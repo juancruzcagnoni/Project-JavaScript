@@ -24,7 +24,7 @@ body{
 }
 
 .navbar-brand{
-    padding-top: 0.8rem;
+    padding: 0.8rem 0;
 }
 
 .nav-link{
@@ -254,7 +254,7 @@ main{
 .shoppingCartImage{
     max-width: 80px;
     max-height: 80px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-right: 0.8rem;
     margin-bottom: 0.6rem;
 }
@@ -263,7 +263,7 @@ main{
     min-height: 96px;
 }
 
-.comprarButton{
+.buyButton{
     border: none;
 }
 
